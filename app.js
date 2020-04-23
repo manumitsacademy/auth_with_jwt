@@ -15,4 +15,6 @@ app.use('/api/users', UserController);
 var AuthController = require(__root + 'auth/AuthController');
 app.use('/api/auth', AuthController);
 
+var StudentController = require(__root + 'student/StudentController');
+app.use('/api/student', StudentController);
 module.exports = app;
