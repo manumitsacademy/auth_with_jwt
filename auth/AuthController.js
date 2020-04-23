@@ -16,7 +16,7 @@ var bcrypt = require('bcryptjs');
 var config = require('../config'); // get config file
 
 router.post('/login', function(req, res) {
-
+  console.log("LLOOOO")
   User.findOne({ email: req.body.email }, function (err, user) {
     if (err) return res.status(500).send('Error on the server.');
     if (!user) return res.status(404).send('No user found.');

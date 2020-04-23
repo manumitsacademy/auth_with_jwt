@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
+var cors = require('cors')
 var db = require('./db');
+app.use(cors())
 global.__root   = __dirname + '/'; 
 
 app.get('/api', function (req, res) {
